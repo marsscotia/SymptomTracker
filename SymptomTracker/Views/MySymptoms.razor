@@ -1,0 +1,10 @@
+﻿@inherits  MySymptomsBase
+@page "/mysymptoms"
+<h3>My Symptoms</h3>
+
+<p>This component is all about displaying symptoms</p>
+
+@if(ViewModel.Symptoms == null)
+{
+    <p><em>Loading...</em></p>
+}

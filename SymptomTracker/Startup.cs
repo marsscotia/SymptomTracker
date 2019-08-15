@@ -14,6 +14,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using SymptomTracker.Areas.Identity;
 using SymptomTracker.Data;
+using SymptomTracker.ViewModels;
 
 namespace SymptomTracker
 {
@@ -38,6 +39,7 @@ namespace SymptomTracker
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddScoped<AuthenticationStateProvider, RevalidatingAuthenticationStateProvider<IdentityUser>>();
+            services.AddTransient<IMySymptomsViewModel, MySymptomsViewModel>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
